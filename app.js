@@ -3,6 +3,7 @@ var express = require("express");
 var server = express();
 var bodyParser = require("body-parser");
 var urlEncodedMid = bodyParser.urlencoded({ extended: true });
+var jsonParser = bodyParser.json();
 var mongoose = require("mongoose");
 var fs = require('fs');
 var path = require('path');
@@ -18,7 +19,7 @@ fs.readdirSync(path.join(__dirname, "models")).forEach(function (filename) {
 });
 
 
-server.use(urlEncodedMid);
+server.use(jsonParser);
 
 
 

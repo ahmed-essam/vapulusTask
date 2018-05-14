@@ -16,9 +16,9 @@ router.use(function(request,response,next){
 });
 
 
-router.post("/getlist/",urlEncodedMid,function (request,response){
+router.post("/getlist",jsonParser,function (request,response){
     
-    var page = request.body.page ? request.body.page:1;
+    var page = request.body.pageNum ? request.body.pageNum:1;
     contactModel.getContacts(request.body.userId,page).then(data=>{
         config.responseFormate.statusCode=200;
         config.responseFormate.message = "success request";
@@ -34,7 +34,7 @@ router.post("/getlist/",urlEncodedMid,function (request,response){
     })
 });
 
-router.post("/addContact",urlEncodedMid,function (request,response,next){
+router.post("/addContact",jsonParser,function (request,response,next){
 
     var contact = request.body;
     contactModel.addContact(contact).then(data=>{
@@ -53,7 +53,7 @@ router.post("/addContact",urlEncodedMid,function (request,response,next){
     })
 });
 
-router.post("/getRecentList",urlEncodedMid,function (request,response){
+router.post("/getRecentList",jsonParser,function (request,response){
     
     contactModel.getRecentContacts(request.body.userId).then(data=>{
         config.responseFormate.statusCode=200;
