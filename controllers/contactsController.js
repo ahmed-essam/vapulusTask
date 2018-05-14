@@ -27,10 +27,8 @@ router.post("/getlist/",urlEncodedMid,function (request,response){
 
     }).catch(error=>{
         response.status(400);
-        response.locals.message = error.message;
-        response.locals.error = error;
         config.responseFormate.statusCode=400;
-        config.responseFormate.message = error;
+        config.responseFormate.message = error.message;
         config.responseFormate.data=[];
         response.json(config.responseFormate);
     })
@@ -49,7 +47,7 @@ router.post("/addContact",urlEncodedMid,function (request,response,next){
         response.status(400);
         response.locals.message = error.message;
         config.responseFormate.statusCode=400;
-        config.responseFormate.message = error;
+        config.responseFormate.message = error.message;
         config.responseFormate.data=[];
         response.json(config.responseFormate);
     })
@@ -67,7 +65,7 @@ router.post("/getRecentList",urlEncodedMid,function (request,response){
         response.status(400);
         response.locals.message = error.message;
         config.responseFormate.statusCode=400;
-        config.responseFormate.message = error;
+        config.responseFormate.message = error.message;
         config.responseFormate.data=[];
         response.json(config.responseFormate);
     })
