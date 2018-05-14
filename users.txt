@@ -1,0 +1,2 @@
+[{"authorization":"ahhhh","deviceToken":"ahhhh","fingerPrint":"ahhhh","name":"user A"},
+{"authorization":"abbb","deviceToken":"abbb","fingerPrint":"abbb","name":"user B"}]
