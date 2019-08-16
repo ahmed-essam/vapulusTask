@@ -11,12 +11,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "express-session": "^1.16.2",
     "fs": "0.0.1-security",
     "mongoose": "^5.1.0",
     "mongoose-paginate": "^5.0.3",
+    "mysql2": "^1.6.5",
+    "nodemailer": "^6.3.0",
     "nodemon": "^1.17.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sequelize": "^5.15.0",
+    "sequelize-cli": "^5.5.0"
   }
 }
